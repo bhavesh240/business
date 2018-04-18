@@ -5,7 +5,7 @@ require 'yaml'
 # This module contains users and product data
 module ShopData
   def users_data
-    @users = YAML.load_file 'user.yaml'
+    @users = YAML.load_file 'users.yaml'
     @buyers_data = []
     @users.each { |data| @buyers_data.push(data) if data.value?('buyer') }
 
